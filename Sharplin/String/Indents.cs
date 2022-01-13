@@ -21,7 +21,7 @@ public static class Indents
     /// </summary>
     public static string ReplaceIndent(this string source, string newIndent = "")
     {
-        string[] lines = source.Split('\r');
+        string[] lines = source.Lines();
 
         int minCommonIndent = lines
             .Where(line => !string.IsNullOrWhiteSpace(line))

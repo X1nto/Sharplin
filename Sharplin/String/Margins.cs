@@ -27,7 +27,7 @@ public static class Margins
         if (marginPrefix.IsBlank())
             throw new ArgumentException("marginPrefix must be non-blank string.", nameof(marginPrefix));
 
-        string[] lines = source.Split('\r');
+        string[] lines = source.Lines();
 
         return lines.Reindent(Util.GetIndentAddFunction(newIndent), line =>
         {
