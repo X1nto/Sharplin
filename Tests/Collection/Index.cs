@@ -1,14 +1,24 @@
 ﻿namespace Tests.Collection;
 
-using System.Collections.ObjectModel;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
 using Sharplin.Collection;
 
 public class Index
 {
-    private static readonly Collection<string> ETestArr = new() { "a", "b", "c", "c" };
+    private static readonly IEnumerable<string> ETestArr = new TestEnumerable();
     private static readonly string[] TestArr = {"a", "b", "c", "c" };
+
+    private class TestEnumerable : IEnumerable<string>
+    {
+        private readonly List<string> _testList = new() { "a", "b", "c", "c"};
+
+        public IEnumerator GetEnumerator() => _testList.GetEnumerator();
+
+        IEnumerator<string> IEnumerable<string>.GetEnumerator() => _testList.GetEnumerator();
+    }
 
     [Test]
     public void Test_IndexOfFirst_Enumerable()
@@ -42,7 +52,6 @@ public class Index
     public void Test_LastIndex()
     {
         Assert.AreEqual(3, TestArr.LastIndex());
-        Assert.AreEqual(3, ETestArr.LastIndex());
     }
 
     [Test]
