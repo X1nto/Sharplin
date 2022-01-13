@@ -2,7 +2,7 @@
 
 public static class Index
 {
-    public static int IndexOfFirst<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
+    public static int IndexOfFirst<TSource>(this IEnumerable<TSource> source, Predicate<TSource> predicate)
     {
         if (source is List<TSource> list) 
             return IndexOfFirst(list, predicate);
@@ -23,7 +23,7 @@ public static class Index
         return -1;
     }
     
-    public static int IndexOfFirst<TSource>(this IList<TSource> source, Func<TSource, bool> predicate)
+    public static int IndexOfFirst<TSource>(this IList<TSource> source, Predicate<TSource> predicate)
     {
         for (int i = 0; i < source.Count; i++)
         {
@@ -34,7 +34,7 @@ public static class Index
         return -1;
     }
 
-    public static int IndexOfLast<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
+    public static int IndexOfLast<TSource>(this IEnumerable<TSource> source, Predicate<TSource> predicate)
     {
         if (source is List<TSource> list)
             return IndexOfLast(list, predicate);
@@ -55,7 +55,7 @@ public static class Index
         return lastIndex;
     }
     
-    public static int IndexOfLast<TSource>(this IList<TSource> source, Func<TSource, bool> predicate)
+    public static int IndexOfLast<TSource>(this IList<TSource> source, Predicate<TSource> predicate)
     {
         for (int i = source.Count; i > 0; i--)
         {
