@@ -8,17 +8,23 @@ public class Indent
     [Test]
     public void Test_TrimIndent()
     {
-        Assert.AreEqual("123", @"
+        void TestTrimIndent(string expected, string actual)
+        {
+            Assert.AreEqual(expected, actual.TrimIndent());
+        }
+        
+        TestTrimIndent("123", @"
         123
-        ".TrimIndent());
-        Assert.AreEqual("123\n    456", @"
+        ");
+        TestTrimIndent("123\n    456", @"
         123
             456
-        ".TrimIndent());
-        Assert.AreEqual("    123\n456", @"
+        ");
+        TestTrimIndent("    123\n456", @"
             123
         456
-        ".TrimIndent());
+        ");
+        
         Assert.AreEqual("|    123\n|456", @"
             123
         456
