@@ -1,6 +1,6 @@
 ﻿namespace Sharplin.String;
 
-public static class Indent
+public static class Indents
 {
     public static string TrimIndent(this string source) => source.ReplaceIndent();
 

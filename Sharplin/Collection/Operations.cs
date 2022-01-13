@@ -1,6 +1,6 @@
 ﻿namespace Sharplin.Collection;
 
-public static class Loops
+public static class Operations
 {
     public static void ForEach<TSource>(this IEnumerable<TSource> source, Action<TSource> action)
     {

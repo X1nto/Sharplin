@@ -2,7 +2,7 @@
 
 using Collection;
 
-public static class Margin
+public static class Margins
 {
     private const string DefaultMarginPrefix = "|";
     

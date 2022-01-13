@@ -1,6 +1,6 @@
 ﻿namespace Sharplin.Collection;
 
-public static class Index
+public static class Indexes
 {
     public static int IndexOfFirst<TSource>(this IEnumerable<TSource> source, Predicate<TSource> predicate)
     {
