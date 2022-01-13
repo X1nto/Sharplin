@@ -2,15 +2,31 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sharplin", "Sharplin\Sharplin.csproj", "{2213E560-F7DA-452C-84B8-656D95B63932}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{1CE4D0FE-523E-4C97-83C5-2A1CFC65FD01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		DebugTest|Any CPU = DebugTest|Any CPU
 		Release|Any CPU = Release|Any CPU
+		ReleaseTest|Any CPU = ReleaseTest|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{2213E560-F7DA-452C-84B8-656D95B63932}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2213E560-F7DA-452C-84B8-656D95B63932}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2213E560-F7DA-452C-84B8-656D95B63932}.DebugTest|Any CPU.ActiveCfg = DebugTest|Any CPU
+		{2213E560-F7DA-452C-84B8-656D95B63932}.DebugTest|Any CPU.Build.0 = DebugTest|Any CPU
 		{2213E560-F7DA-452C-84B8-656D95B63932}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2213E560-F7DA-452C-84B8-656D95B63932}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2213E560-F7DA-452C-84B8-656D95B63932}.ReleaseTest|Any CPU.ActiveCfg = ReleaseTest|Any CPU
+		{2213E560-F7DA-452C-84B8-656D95B63932}.ReleaseTest|Any CPU.Build.0 = ReleaseTest|Any CPU
+		{1CE4D0FE-523E-4C97-83C5-2A1CFC65FD01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {1CE4D0FE-523E-4C97-83C5-2A1CFC65FD01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {1CE4D0FE-523E-4C97-83C5-2A1CFC65FD01}.DebugTest|Any CPU.ActiveCfg = DebugTest|Any CPU
+        {1CE4D0FE-523E-4C97-83C5-2A1CFC65FD01}.DebugTest|Any CPU.Build.0 = DebugTest|Any CPU
+        {1CE4D0FE-523E-4C97-83C5-2A1CFC65FD01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {1CE4D0FE-523E-4C97-83C5-2A1CFC65FD01}.Release|Any CPU.Build.0 = Release|Any CPU
+        {1CE4D0FE-523E-4C97-83C5-2A1CFC65FD01}.ReleaseTest|Any CPU.ActiveCfg = ReleaseTest|Any CPU
+        {1CE4D0FE-523E-4C97-83C5-2A1CFC65FD01}.ReleaseTest|Any CPU.Build.0 = ReleaseTest|Any CPU
 	EndGlobalSection
 EndGlobal
