@@ -1,8 +1,8 @@
-﻿namespace Sharplin.Text;
+﻿namespace Sharplin.String;
 
 using Collection;
 
-public static class Indents
+public static class Indent
 {
     private const string DefaultMarginPrefix = "|";
     
