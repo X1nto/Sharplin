@@ -5,6 +5,23 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <OutputType>Library</OutputType>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    </PropertyGroup>
+    
+    <PropertyGroup>
+        <PackageId>Xinto.Sharplin</PackageId>
+        <Version>0.1.0-alpha</Version>
+        <Authors>Xinto</Authors>
+        <Title>Sharplin</Title>
+        <Description>Sharplin is a .NET library that ports sweet tools and extensions from Kotlin to C#.</Description>
+        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/X1nto/Sharplin</PackageProjectUrl>
+        <PackageReleaseNotes>Initial Alpha Release</PackageReleaseNotes>
+        <PackageTags>Kotlin; Kotlin stdlib; stdlib; extensions; tools; utilities</PackageTags>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <RepositoryUrl>https://github.com/X1nto/Sharplin</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <Copyright>Copyright (C) 2022 Xinto</Copyright>
     </PropertyGroup>
 
 </Project>
