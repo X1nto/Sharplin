@@ -1,7 +1,5 @@
 ﻿namespace Sharplin.Dictionary;
 
-using System.Collections.Generic;
-
 /// <summary>Helper class containing methods for quickly building a dictionary.</summary>
 /// <example>
 ///     <para>
@@ -30,8 +28,10 @@ using System.Collections.Generic;
 /// </example>
 public static class Builders
 {
-    /// <summary>Constructs a <see cref="Dictionary{TKey,TValue}"/> from the provided <
-    /// paramref name="pairs"/>
+    /// <summary>
+    ///     Constructs a <see cref="Dictionary{TKey,TValue}"/> from the provided
+    ///     <
+    ///         paramref name="pairs"/>
     /// </summary>
     /// <example>
     ///     <code>
@@ -42,13 +42,13 @@ public static class Builders
     ///     </code>
     /// </example>
     /// <returns>A <see cref="Dictionary{TKey,TValue}"/> containing the provided <paramref name="pairs"/></returns>
-
     public static Dictionary<TKey, TValue> DictionaryOf<TKey, TValue>(params KeyValuePair<TKey, TValue>[] pairs)
-        where TKey : notnull => 
+        where TKey : notnull =>
         pairs.ToDictionary(pair => pair.Key, pair => pair.Value);
 
-    /// <summary>Constructs a <see cref="Dictionary{TKey,TValue}"/> from the provided
-    /// <paramref name="pairs"/>
+    /// <summary>
+    ///     Constructs a <see cref="Dictionary{TKey,TValue}"/> from the provided
+    ///     <paramref name="pairs"/>
     /// </summary>
     /// <example>
     ///     <code>
@@ -62,7 +62,7 @@ public static class Builders
     public static Dictionary<TKey, TValue> DictionaryOf<TKey, TValue>(params (TKey key, TValue value)[] pairs)
         where TKey : notnull =>
         pairs.ToDictionary(pair => pair.Item1, pair => pair.Item2);
-    
+
     /// <returns>
     ///     A <see cref="KeyValuePair{TKey,TValue}"/> of the provided <paramref name="key"/> and
     ///     <paramref name="value"/>
