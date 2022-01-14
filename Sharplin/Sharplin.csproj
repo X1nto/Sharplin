@@ -7,7 +7,7 @@
         <OutputType>Library</OutputType>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
-    
+
     <PropertyGroup>
         <PackageId>Xinto.Sharplin</PackageId>
         <Version>0.1.1-alpha</Version>
