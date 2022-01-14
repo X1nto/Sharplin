@@ -7,7 +7,7 @@ public static class Util
     internal static int IndentWidth(this string source)
     {
         int nonWhitespaceIndex = source.ToCharArray()
-            .IndexOfFirst(c => !string.IsNullOrWhiteSpace(c.ToString()));
+            .FindIndex(c => !string.IsNullOrWhiteSpace(c.ToString()));
 
         return nonWhitespaceIndex != -1 ? nonWhitespaceIndex : source.Length;
     }

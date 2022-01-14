@@ -41,7 +41,7 @@ public static class Margins
 
         return lines.Reindent(Util.GetIndentAddFunction(newIndent), line =>
         {
-            int firstNonWhitespaceIndex = line.ToCharArray().IndexOfFirst(c => !char.IsWhiteSpace(c));
+            int firstNonWhitespaceIndex = line.ToCharArray().FindIndex(c => !char.IsWhiteSpace(c));
 
             if (firstNonWhitespaceIndex == -1)
                 return null;
