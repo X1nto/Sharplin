@@ -38,4 +38,10 @@ public static class Builders
     ///     <paramref name="value" />
     /// </returns>
     public static KeyValuePair<TKey, TValue> PairOf<TKey, TValue>(TKey key, TValue value) => new(key, value);
+    
+    /// <returns>
+    ///     A <see cref="KeyValuePair{TKey,TValue}" /> of the provided <paramref name="key" /> and
+    ///     <paramref name="value" />
+    /// </returns>
+    public static KeyValuePair<TKey, TValue> Pair<TKey, TValue>(this TKey key, TValue value) => new(key, value);
 }
