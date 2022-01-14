@@ -5,10 +5,7 @@ public static class Scopes
     /// <summary>
     ///     Calls the provided <paramref name="block"/> function with <paramref name="source"/> as its argument.
     /// </summary>
-    /// <typeparam name="TResult">Result of the <paramref name="block"/> invocation.</typeparam>
-    /// <returns>
-    ///     <typeparamref name="TResult"/>
-    /// </returns>
+    /// <returns> Result of the <paramref name="block"/> invocation.</returns>
     public static TResult Let<TSource, TResult>(this TSource source, Func<TSource, TResult> block) => block(source);
 
     /// <summary>
