@@ -1,5 +1,6 @@
 ﻿# Sharplin
-[![NuGet](https://img.shields.io/nuget/v/Xinto.Sharplin.svg)](https://www.nuget.org/packages/Xinto.Sharplin/)  
+[![NuGet](https://img.shields.io/nuget/v/Xinto.Sharplin.svg)](https://www.nuget.org/packages/Xinto.Sharplin/)
+
 Sharplin is a .NET library that ports sweet tools and extensions from Kotlin to C#.
 
 Introduction
