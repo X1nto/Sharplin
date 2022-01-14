@@ -1,5 +1,6 @@
 ﻿namespace Tests.Dictionary;
 
+using System;
 using System.Collections.Generic;
 using NUnit.Framework;
 using Sharplin.Dictionary;
@@ -11,6 +12,16 @@ public class Builders
         {"number", 1},
         {"money", 50},
     };
+
+    [Test]
+    public void Test_SmartDictionaryOf()
+    {
+        var actual = SmartDictionaryOf<string, int>(
+            "number", 1,
+            "money", 50
+        );
+        Assert.AreEqual(Expected, actual);
+    }
 
     [Test]
     public void Test_DictionaryOf_PairOf()
