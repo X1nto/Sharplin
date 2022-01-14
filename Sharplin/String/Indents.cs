@@ -15,9 +15,6 @@ public static class Indents
     /// <remarks>Doesn't preserve the original line endings.</remarks>
     public static string TrimIndent(this string source) => source.ReplaceIndent();
 
-    public static string TrimWhiteSpace(this string source) =>
-        string.Join("", source.Where(c => !char.IsWhiteSpace(c)));
-
     /// <summary>
     ///     Detects a common minimal indent and replaces it with the specified <paramref name="newIndent" />.
     /// </summary>
