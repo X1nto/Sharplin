@@ -3,8 +3,6 @@
 using System.Collections.Generic;
 using NUnit.Framework;
 
-using static Sharplin.Collection.Builders;
-
 public class Builders
 {
     [Test]
