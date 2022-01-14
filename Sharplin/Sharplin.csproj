@@ -10,14 +10,14 @@
 
     <PropertyGroup>
         <PackageId>Xinto.Sharplin</PackageId>
-        <Version>0.1.1-alpha</Version>
+        <Version>0.2.0-alpha</Version>
         <Authors>Xinto</Authors>
         <Title>Sharplin</Title>
         <Description>Sharplin is a .NET library that ports sweet tools and extensions from Kotlin to C#.</Description>
         <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/X1nto/Sharplin</PackageProjectUrl>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageReleaseNotes>Initial Alpha Release</PackageReleaseNotes>
+        <PackageReleaseNotes>https://github.com/X1nto/Sharplin/releases/tag/0.2.0</PackageReleaseNotes>
         <PackageTags>Kotlin; Kotlin stdlib; stdlib; extensions; tools; utilities</PackageTags>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
         <RepositoryUrl>https://github.com/X1nto/Sharplin</RepositoryUrl>
