@@ -3,15 +3,15 @@
 public static class Operations
 {
     /// <summary>
-    ///     Performs the given <paramref name="action" /> on each element of the <paramref name="source" />.
+    ///     Performs the given <paramref name="action"/> on each element of the <paramref name="source"/>.
     /// </summary>
     public static void ForEach<TSource>(this IEnumerable<TSource> source, Action<TSource> action)
     {
         foreach (TSource item in source) action(item);
     }
-    
+
     /// <summary>
-    ///     Performs the given <paramref name="action" /> on each element of the <paramref name="source" />,
+    ///     Performs the given <paramref name="action"/> on each element of the <paramref name="source"/>,
     ///     providing sequential index with the element.
     /// </summary>
     /// <param name="action">
@@ -24,7 +24,7 @@ public static class Operations
     }
 
     /// <summary>
-    ///     Performs the given <paramref name="action" /> on each element of the <paramref name="source" />,
+    ///     Performs the given <paramref name="action"/> on each element of the <paramref name="source"/>,
     ///     providing sequential index with the element.
     /// </summary>
     /// <param name="action">

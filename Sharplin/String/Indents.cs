@@ -16,7 +16,7 @@ public static class Indents
     public static string TrimIndent(this string source) => source.ReplaceIndent();
 
     /// <summary>
-    ///     Detects a common minimal indent and replaces it with the specified <paramref name="newIndent" />.
+    ///     Detects a common minimal indent and replaces it with the specified <paramref name="newIndent"/>.
     /// </summary>
     public static string ReplaceIndent(this string source, string newIndent = "")
     {

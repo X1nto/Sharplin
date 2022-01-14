@@ -28,20 +28,20 @@
 /// </example>
 public static class Builders
 {
-    /// <returns>A dictionary containing the provided <paramref name="pairs" /></returns>
+    /// <returns>A dictionary containing the provided <paramref name="pairs"/></returns>
     public static Dictionary<TKey, TValue> DictionaryOf<TKey, TValue>(params KeyValuePair<TKey, TValue>[] pairs)
         where TKey : notnull
         => pairs.ToDictionary(pair => pair.Key, pair => pair.Value);
 
     /// <returns>
-    ///     A <see cref="KeyValuePair{TKey,TValue}" /> of the provided <paramref name="key" /> and
-    ///     <paramref name="value" />
+    ///     A <see cref="KeyValuePair{TKey,TValue}"/> of the provided <paramref name="key"/> and
+    ///     <paramref name="value"/>
     /// </returns>
     public static KeyValuePair<TKey, TValue> PairOf<TKey, TValue>(TKey key, TValue value) => new(key, value);
-    
+
     /// <returns>
-    ///     A <see cref="KeyValuePair{TKey,TValue}" /> of the provided <paramref name="key" /> and
-    ///     <paramref name="value" />
+    ///     A <see cref="KeyValuePair{TKey,TValue}"/> of the provided <paramref name="key"/> and
+    ///     <paramref name="value"/>
     /// </returns>
     public static KeyValuePair<TKey, TValue> Pair<TKey, TValue>(this TKey key, TValue value) => new(key, value);
 }

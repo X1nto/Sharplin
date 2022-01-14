@@ -28,12 +28,12 @@
 /// </example>
 public static class Builders
 {
-    /// <returns>An array containing the given <paramref name="items" /></returns>
+    /// <returns>An array containing the given <paramref name="items"/></returns>
     public static TSource[] ArrayOf<TSource>(params TSource[] items) => items;
 
-    /// <returns>A <see cref="List{T}" /> containing the given <paramref name="items" /></returns>
+    /// <returns>A <see cref="List{T}"/> containing the given <paramref name="items"/></returns>
     public static List<TSource> ListOf<TSource>(params TSource[] items) => items.ToList();
 
-    /// <returns>A <see cref="HashSet{T}" /> containing the given <paramref name="items" /></returns>
+    /// <returns>A <see cref="HashSet{T}"/> containing the given <paramref name="items"/></returns>
     public static HashSet<TSource> HashSetOf<TSource>(params TSource[] items) => items.ToHashSet();
 }

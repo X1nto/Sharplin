@@ -1,16 +1,14 @@
 ﻿namespace Sharplin.Collection;
 
-using System.Collections.Generic;
-
 public static class Indexes
 {
     /// <returns>
-    ///     Index of the first element matching the given <paramref name="predicate" />, or -1 if
-    ///     <paramref name="source" /> does not contain such element.
+    ///     Index of the first element matching the given <paramref name="predicate"/>, or -1 if
+    ///     <paramref name="source"/> does not contain such element.
     /// </returns>
     /// <remarks>
-    ///     If <paramref name="source" /> is of type <see cref="IList{T}" />, this method calls
-    ///     <see cref="IndexOfFirst{TSource}(System.Collections.Generic.IList{TSource},System.Predicate{TSource})" /> instead.
+    ///     If <paramref name="source"/> is of type <see cref="IList{T}"/>, this method calls
+    ///     <see cref="IndexOfFirst{TSource}(System.Collections.Generic.IList{TSource},System.Predicate{TSource})"/> instead.
     /// </remarks>
     public static int IndexOfFirst<TSource>(this IEnumerable<TSource> source, Predicate<TSource> predicate)
     {
@@ -34,8 +32,8 @@ public static class Indexes
     }
 
     /// <returns>
-    ///     index of the first element matching the given <paramref name="predicate" />, or -1 if
-    ///     <paramref name="source" /> does not contain such element.
+    ///     index of the first element matching the given <paramref name="predicate"/>, or -1 if
+    ///     <paramref name="source"/> does not contain such element.
     /// </returns>
     public static int IndexOfFirst<TSource>(this IList<TSource> source, Predicate<TSource> predicate)
     {
@@ -47,12 +45,12 @@ public static class Indexes
     }
 
     /// <returns>
-    ///     Index of the last element matching the given <paramref name="predicate" />, or -1 if
-    ///     <paramref name="source" /> does not contain such element.
+    ///     Index of the last element matching the given <paramref name="predicate"/>, or -1 if
+    ///     <paramref name="source"/> does not contain such element.
     /// </returns>
     /// <remarks>
-    ///     If <paramref name="source" /> is of type <see cref="IList{T}" />, this method calls
-    ///     <see cref="IndexOfFirst{TSource}(System.Collections.Generic.IList{TSource},System.Predicate{TSource})" /> instead.
+    ///     If <paramref name="source"/> is of type <see cref="IList{T}"/>, this method calls
+    ///     <see cref="IndexOfFirst{TSource}(System.Collections.Generic.IList{TSource},System.Predicate{TSource})"/> instead.
     /// </remarks>
     public static int IndexOfLast<TSource>(this IEnumerable<TSource> source, Predicate<TSource> predicate)
     {
@@ -76,8 +74,8 @@ public static class Indexes
     }
 
     /// <returns>
-    ///     Index of the last element matching the given <paramref name="predicate" />, or -1 if
-    ///     <paramref name="source" /> does not contain such element.
+    ///     Index of the last element matching the given <paramref name="predicate"/>, or -1 if
+    ///     <paramref name="source"/> does not contain such element.
     /// </returns>
     public static int IndexOfLast<TSource>(this IList<TSource> source, Predicate<TSource> predicate)
     {

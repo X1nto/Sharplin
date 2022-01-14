@@ -11,14 +11,14 @@ public class Builders
         {"number", 1},
         {"money", 50},
     };
-    
+
     [Test]
     public void Test_DictionaryOf_PairOf()
     {
         var actual = DictionaryOf(PairOf("number", 1), PairOf("money", 50));
         Assert.AreEqual(Expected, actual);
     }
-    
+
     [Test]
     public void Test_DictionaryOf_Pair()
     {
