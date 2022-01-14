@@ -2,17 +2,18 @@
 
 Sharplin is a .NET library that ports sweet tools and extensions from Kotlin to C#.
 
+Introduction
+-----------
+
 Are you tired of writing some basic logic yourself? Do you want to get lazy? Are you jealous of your Kotlin friends
 having a rich stdlib with shortcuts for everything your heart desires? Well, then this library is for you!
 
 Sharplin provides simple yet useful extensions for C# to make your life easier as a developer. No longer you have to
 write the code to find the first element in an array that matches the given predicate yourself! How cool is that?
 
-Also the name is epic, isn't it?
-
 Documentation
 --------
-Coming soon.
+Head over to [docs](Docs)
 
 License
 -------
