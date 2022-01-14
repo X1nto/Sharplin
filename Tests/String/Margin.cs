@@ -17,6 +17,6 @@ public class Margin
             #ABC
             #123
             #456
-        ".TrimMargin(marginPrefix: "#"));
+        ".TrimMargin("#"));
     }
 }

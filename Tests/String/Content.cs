@@ -25,6 +25,7 @@ public class Content
         {
             Assert.AreEqual(new[] {"this", "is", "a", "test", "sentence"}, actual.Lines());
         }
+
         TestLines("this\nis\na\ntest\nsentence");
         TestLines("this\ris\ra\rtest\rsentence");
         TestLines("this\r\nis\r\na\r\ntest\r\nsentence");

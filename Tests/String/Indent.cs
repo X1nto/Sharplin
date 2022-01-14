@@ -12,7 +12,7 @@ public class Indent
         {
             Assert.AreEqual(expected, actual.TrimIndent());
         }
-        
+
         TestTrimIndent("123", @"
         123
         ");
@@ -24,10 +24,10 @@ public class Indent
             123
         456
         ");
-        
+
         Assert.AreEqual("|    123\n|456", @"
             123
         456
-        ".ReplaceIndent(newIndent: "|"));
+        ".ReplaceIndent("|"));
     }
 }

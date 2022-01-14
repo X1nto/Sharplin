@@ -12,7 +12,7 @@ public class Builders
         string[] actual = ArrayOf("this", "is", "a", "test");
         Assert.AreEqual(expected, actual);
     }
-    
+
     [Test]
     public void Test_ListOf()
     {
@@ -20,7 +20,7 @@ public class Builders
         var actual = ListOf("this", "is", "a", "test");
         Assert.AreEqual(expected, actual);
     }
-    
+
     [Test]
     public void Test_HashSetOf()
     {
