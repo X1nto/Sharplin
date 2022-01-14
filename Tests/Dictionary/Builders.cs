@@ -1,6 +1,5 @@
 ﻿namespace Tests.Dictionary;
 
-using System;
 using System.Collections.Generic;
 using NUnit.Framework;
 using Sharplin.Dictionary;
@@ -14,11 +13,11 @@ public class Builders
     };
 
     [Test]
-    public void Test_SmartDictionaryOf()
+    public void Test_DictionaryOf_Tuple()
     {
-        var actual = SmartDictionaryOf<string, int>(
-            "number", 1,
-            "money", 50
+        var actual = DictionaryOf(
+            ("number", 1),
+            ("money", 50)
         );
         Assert.AreEqual(Expected, actual);
     }
