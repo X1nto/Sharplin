@@ -1,15 +1,14 @@
 ﻿# Sharplin
 [![NuGet](https://img.shields.io/nuget/v/Xinto.Sharplin.svg)](https://www.nuget.org/packages/Xinto.Sharplin/)
 
-Sharplin is a .NET library that ports sweet tools and extensions from Kotlin to C#.
+Sharplin is a .NET library that provides sweet tools and extensions to help you focus on the parts of your code that matter.
 
 Introduction
 -----------
 Are you tired of writing some basic logic yourself? Do you want to get lazy? Are you jealous of your Kotlin friends
-having a rich stdlib with shortcuts for everything your heart desires? Well, then this library is for you!
+having a rich stdlib with shortcuts for everything your heart desires? Well, worry not, we got you covered!
 
-Sharplin provides simple yet useful extensions for C# to make your life easier as a developer. No longer you have to
-write the code to find the first element in an array that matches the given predicate yourself! How cool is that?
+Sharplin gives you access to simple yet useful extensions for .NET to make your life easier as a developer.
 
 Documentation
 --------
