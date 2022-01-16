@@ -1,2 +1,4 @@
-﻿global using static Sharplin.Collection.Builders;
+﻿global using static Sharplin.List.Builders;
+global using static Sharplin.Array.Builders;
+global using static Sharplin.HashSet.Builders;
 global using static Sharplin.Dictionary.Builders;

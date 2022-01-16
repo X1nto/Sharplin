@@ -1,13 +1,15 @@
 ﻿# Builders
 Collection builders are useful for quickly making Lists, Arrays and HashSets. Sharplin provides Kotlin-styled tools to help you quickly build collections.
 
+This example demonstrates List builders, but the same can be applied to Arrays, HashSets and Dictionaries too.
+
 Usage with implicit usings
 -----
 First of all, you have to prepare your project to properly use collection builder classes. For this step, you need to have implicit usings enabled in your csproj file.
 
 In your project, create a file called GlobalUsings.cs with the following content:
 ```c#
-global using static Sharplin.Collection.Builders;
+global using static Sharplin.List.Builders;
 ```
 (If you already have a file for your global usings, you can simply add the code above to it.)
 

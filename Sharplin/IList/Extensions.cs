@@ -1,15 +1,9 @@
-﻿namespace Sharplin.Collection;
+﻿namespace Sharplin.IList;
 
-public static class Operations
+using ICollection;
+
+public static class Extensions
 {
-    /// <summary>
-    ///     Performs the given <paramref name="action"/> on each element of the <paramref name="source"/>.
-    /// </summary>
-    public static void ForEach<TSource>(this IEnumerable<TSource> source, Action<TSource> action)
-    {
-        foreach (TSource item in source) action(item);
-    }
-
     /// <summary>
     ///     Performs the given <paramref name="action"/> on each element of the <paramref name="source"/>,
     ///     providing sequential index with the element.

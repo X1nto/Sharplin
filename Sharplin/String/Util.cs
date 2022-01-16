@@ -1,6 +1,7 @@
 ﻿namespace Sharplin.String;
 
-using Collection;
+using Array;
+using Scope;
 
 public static class Util
 {
@@ -29,11 +30,7 @@ public static class Util
 
         var transform = source
             .Where((value, index) => !(index == 0 || index == lastIndex) && !string.IsNullOrWhiteSpace(value))
-            .Select(value =>
-            {
-                string? cut = indentCutFunction(value);
-                return cut is null ? value : indentAddFunction(cut);
-            });
+            .Select(value => indentCutFunction(value)?.Let(indentAddFunction) ?? value);
 
         return string.Join("\n", transform);
     }

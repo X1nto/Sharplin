@@ -3,7 +3,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
-using Sharplin.Collection;
+using Sharplin.ICollection;
+using Sharplin.IEnumerable;
 
 public class Index
 {
