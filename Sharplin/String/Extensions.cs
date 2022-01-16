@@ -5,12 +5,23 @@ using Array;
 
 public static class Extensions
 {
+    //TODO implement our own checkers instead of relying on string
+    #region Blank and Empty
+
     /// <returns>true if <paramref name="source"/> is empty or consists solely of whitespace characters.</returns>
     public static bool IsBlank(this string source) => string.IsNullOrEmpty(source) || string.IsNullOrWhiteSpace(source);
 
     /// <returns>true if <paramref name="source"/> is empty (contains no characters).</returns>
     public static bool IsEmpty(this string source) => string.IsNullOrEmpty(source);
 
+    /// <returns>true if <paramref name="source"/> is not blank.</returns>
+    public static bool IsNotBlank(this string source) => !source.IsBlank();
+
+    /// <returns>true if <paramref name="source"/> is not empty.</returns>
+    public static bool IsNotEmpty(this string source) => !source.IsEmpty();
+
+    #endregion
+    
     /// <summary>
     ///     Splits <paramref name="source"/> to an array of lines delimited by any of the following character sequences: CRLF,
     ///     LF or CR.
@@ -83,7 +94,7 @@ public static class Extensions
         string[] lines = source.Lines();
 
         int minCommonIndent = lines
-            .Where(line => !string.IsNullOrWhiteSpace(line))
+            .Where(IsNotBlank)
             .Select(line => line.IndentWidth())
             .Min();
 
@@ -121,13 +132,11 @@ public static class Extensions
         string marginPrefix = DefaultMarginPrefix)
     {
         if (marginPrefix.IsBlank())
-            throw new ArgumentException("marginPrefix must be non-blank string.", nameof(marginPrefix));
+            throw new ArgumentException($"{nameof(marginPrefix)} must be non-blank string.", nameof(marginPrefix));
 
-        string[] lines = source.Lines();
-
-        return lines.Reindent(Util.GetIndentAddFunction(newIndent), line =>
+        return source.Lines().Reindent(Util.GetIndentAddFunction(newIndent), line =>
         {
-            int firstNonWhitespaceIndex = line.ToCharArray().FindIndex(c => !char.IsWhiteSpace(c));
+            int firstNonWhitespaceIndex = line.FindIndex(c => !char.IsWhiteSpace(c));
 
             if (firstNonWhitespaceIndex == -1)
                 return null;

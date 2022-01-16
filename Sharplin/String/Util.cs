@@ -1,21 +1,17 @@
 ﻿namespace Sharplin.String;
 
-using Array;
+using IReadOnlyCollection;
 using Scope;
 
 public static class Util
 {
-    internal static int IndentWidth(this string source)
-    {
-        int nonWhitespaceIndex = source.ToCharArray()
-            .FindIndex(c => !string.IsNullOrWhiteSpace(c.ToString()));
-
-        return nonWhitespaceIndex != -1 ? nonWhitespaceIndex : source.Length;
-    }
+    internal static int IndentWidth(this string source) => source
+        .FindIndex(c => !char.IsWhiteSpace(c))
+        .Let(index => index == -1 ? source.Length : index);
 
     internal static Func<string, string> GetIndentAddFunction(string indent)
     {
-        if (string.IsNullOrEmpty(indent))
+        if (indent.IsEmpty())
             return line => line;
 
         return line => indent + line;
@@ -26,10 +22,8 @@ public static class Util
         Func<string, string> indentAddFunction,
         Func<string, string?> indentCutFunction)
     {
-        int lastIndex = source.Count - 1;
-
         var transform = source
-            .Where((value, index) => !(index == 0 || index == lastIndex) && !string.IsNullOrWhiteSpace(value))
+            .Where((value, index) => !(index == 0 || index == source.LastIndex()) && value.IsNotBlank())
             .Select(value => indentCutFunction(value)?.Let(indentAddFunction) ?? value);
 
         return string.Join("\n", transform);
