@@ -8,7 +8,7 @@ Introduction
 Are you tired of writing some basic logic yourself? Do you want to get lazy? Are you jealous of your Kotlin friends
 having a rich stdlib with shortcuts for everything your heart desires? Well, worry not, we got you covered!
 
-Sharplin gives you access to simple yet useful extensions for .NET to make your life easier as a developer.
+Sharplin gives you access to simple yet useful .NET extensions to boost your productivity.
 
 Documentation
 --------
