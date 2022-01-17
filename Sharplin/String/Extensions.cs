@@ -5,20 +5,31 @@ using Array;
 
 public static class Extensions
 {
-    //TODO implement our own checkers instead of relying on string
     #region Blank and Empty
 
     /// <returns>true if <paramref name="source"/> is empty or consists solely of whitespace characters.</returns>
-    public static bool IsBlank(this string source) => string.IsNullOrEmpty(source) || string.IsNullOrWhiteSpace(source);
+    public static bool IsBlank(this string source) => source.Length == 0 || source.All(char.IsWhiteSpace);
 
     /// <returns>true if <paramref name="source"/> is empty (contains no characters).</returns>
-    public static bool IsEmpty(this string source) => string.IsNullOrEmpty(source);
+    public static bool IsEmpty(this string source) => source.Length == 0;
 
+    /// <returns>true if <paramref name="source"/> is null or empty or consists solely of whitespace characters.</returns>
+    public static bool IsNullOrBlank(this string? source) => source is null || source.IsBlank();
+
+    /// <returns>true if <paramref name="source"/> is null or empty (contains no characters).</returns>
+    public static bool IsNullOrEmpty(this string? source) => source is null || source.IsEmpty();
+    
     /// <returns>true if <paramref name="source"/> is not blank.</returns>
     public static bool IsNotBlank(this string source) => !source.IsBlank();
 
     /// <returns>true if <paramref name="source"/> is not empty.</returns>
     public static bool IsNotEmpty(this string source) => !source.IsEmpty();
+    
+    /// <returns>true if <paramref name="source"/> is not null and blank.</returns>
+    public static bool IsNotNullAndBlank(this string? source) => source is not null && source.IsNotBlank();
+
+    /// <returns>true if <paramref name="source"/> is not null and empty.</returns>
+    public static bool IsNotNullAndEmpty(this string? source) => source is not null && source.IsNotEmpty();
 
     #endregion
     
