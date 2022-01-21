@@ -3,7 +3,7 @@
 using IReadOnlyCollection;
 using Scope;
 
-public static class Util
+internal static class Util
 {
     internal static int IndentWidth(this string source) => source
         .FindIndex(c => !char.IsWhiteSpace(c))
