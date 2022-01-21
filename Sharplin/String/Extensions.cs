@@ -32,7 +32,9 @@ public static class Extensions
     public static bool IsNotNullAndEmpty(this string? source) => source is not null && source.IsNotEmpty();
 
     #endregion
-    
+
+    #region Lines
+
     /// <summary>
     ///     Splits <paramref name="source"/> to an array of lines delimited by any of the following character sequences: CRLF,
     ///     LF or CR.
@@ -40,6 +42,10 @@ public static class Extensions
     /// <remarks>The lines returned do not include terminating line separators.</remarks>
     public static string[] Lines(this string source) =>
         source.Split(new[] {"\r\n", "\n", "\r"}, StringSplitOptions.None);
+    
+    public static int LineCount(this string source) => source.Lines().Length;
+
+    #endregion
     
     #region Capitalization
 
